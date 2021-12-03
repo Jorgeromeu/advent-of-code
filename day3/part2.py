@@ -1,9 +1,3 @@
-lines = open('input.txt').readlines()
-num_bits = len(lines[0]) - 1
-
-# create a stripped copy of the list for o2 and co2
-nums_o2 = list(map(lambda s: s.strip(), lines))
-nums_co2 = list(map(lambda s: s.strip(), lines))
 
 def count_bits(nums, bit_idx):
     count_0 = 0
@@ -49,14 +43,16 @@ def co2_criterion(bit, count_0, count_1):
 
 if __name__ == '__main__':
 
+    lines = [num.strip() for num in open('input_small.txt').readlines()]
+    num_bits = len(lines[0])
 
-    o2_gen = solve(nums_o2, o2_criterion)
-    co2_scrub = solve(nums_co2, co2_criterion)
+    o2_gen = solve(lines.copy(), o2_criterion)
+    co2_scrub = solve(lines.copy(), co2_criterion)
 
-    print('o2', o2_gen)
-    print('co2', co2_scrub)
+    print('o2:', o2_gen)
+    print('co2:', co2_scrub)
 
+    # get actual AoC result
     o2_gen = int(o2_gen, base=2)
     co2_scrub = int(co2_scrub, base=2)
-
     print(co2_scrub * o2_gen)
