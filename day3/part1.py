@@ -1,4 +1,4 @@
-nums = [s.strip() for s in open('input_small.txt').readlines()]
+nums = [s.strip() for s in open('input.txt').readlines()]
 num_bits = len(nums[0])
 
 # for each bit-index keep track of how many 1s and 0s we find

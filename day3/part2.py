@@ -43,7 +43,7 @@ def co2_criterion(bit, count_0, count_1):
 
 if __name__ == '__main__':
 
-    lines = [num.strip() for num in open('input_small.txt').readlines()]
+    lines = [num.strip() for num in open('input.txt').readlines()]
     num_bits = len(lines[0])
 
     o2_gen = solve(lines.copy(), o2_criterion)
