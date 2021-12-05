@@ -43,6 +43,6 @@ for x1, y1, x2, y2 in points:
 
 
 plt.imshow(table)
-plt.show()
+plt.savefig('result.png', bbox_inches='tight')
 
 print(np.count_nonzero(table >= 2))
