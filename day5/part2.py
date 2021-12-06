@@ -23,12 +23,12 @@ for x1, y1, x2, y2 in points:
 
     # horizontal line
     if x1 == x2:
-        y1, y2 = sorted((y1, y2))                
+        y1, y2 = sorted((y1, y2))
         table[y1:y2+1, x1] += 1
 
     # vertical line 
     elif y1 == y2:
-        x1, x2 = sorted((x1, x2))                
+        x1, x2 = sorted((x1, x2))
         table[y1, x1:x2+1] += 1
 
     # diagonal lines
@@ -39,8 +39,6 @@ for x1, y1, x2, y2 in points:
 
         for i in range(line_len + 1):
             table[y1 + i*dir_y, x1 + i*dir_x] += 1
-
-
 
 plt.imshow(table)
 plt.savefig('result.png', bbox_inches='tight')
