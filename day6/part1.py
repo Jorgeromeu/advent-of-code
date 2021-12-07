@@ -1,5 +1,4 @@
-school = open('input.txt').read().strip().split(',')
-school = list(map(int, school))
+school = [int n for n in open('input.txt').read().strip().split(',')]
 
 num_days = 256
 
@@ -25,4 +24,3 @@ for day in range(num_days):
     print(day)
 
 print(len(school))
-    

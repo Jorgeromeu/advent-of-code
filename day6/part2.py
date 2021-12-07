@@ -1,7 +1,6 @@
 import numpy as np
 
-school = open('input.txt').read().strip().split(',')
-school = list(map(int, school))
+school = [int(n) for n in open('input.txt').read().strip().split(',')]
 
 num_days = 256
 
@@ -19,7 +18,7 @@ for day in range(num_days):
     # quantity of i becomes quantity of i+1
     for i in range(0, 8):
         counts[i] = counts_cp[i+1]
-    
+
     # the amount of newborns is the amount of 6s in the previous iteration
     counts[8] = counts_cp[0];
 

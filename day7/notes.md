@@ -1,0 +1,3 @@
+- crabs only move horizonally
+- horizontal pos of each crab
+- position +1/-1 costs 1 fuel
