@@ -96,5 +96,5 @@ if __name__ == "__main__":
     for cluster in uf.clusters():
         sizes.append(len(cluster))
 
-    sizes = sorted(basins, reverse=True)
-    print(basins[0] * basins[1] * basins[2])
+    sizes = sorted(sizes, reverse=True)
+    print(sizes[0] * sizes[1] * sizes[2])
