@@ -9,8 +9,8 @@ def parse_input(file_path):
         # parse the line
         line = line.strip()
         nums, displayed = line.split('|')
-        nums = nums.strip().split(' ')
-        displayed = displayed.strip().split(' ')
+        nums = nums.strip().explode(' ')
+        displayed = displayed.strip().explode(' ')
 
         displayed = [frozenset(segs) for segs in displayed]
         nums = [frozenset(segs) for segs in nums]
