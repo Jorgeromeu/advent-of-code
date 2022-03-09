@@ -45,9 +45,8 @@ if __name__ == "__main__":
     img = Image(img)
     img.show()
 
-    for _ in range(2):
+    for _ in range(70):
         img.step(lookup)
-
-    img.show()
+        img.show()
 
     print(np.count_nonzero(img.arr))

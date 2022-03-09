@@ -28,6 +28,8 @@ def get_rot_matrices():
 
 rotation_matrices = get_rot_matrices()
 
+print(rotation_matrices)
+
 def parse_input(file_path: str):
     scanners = []
     curr_scanner = None
@@ -74,7 +76,6 @@ def find_matches(s1: np.ndarray, s2: np.ndarray, thresh=12):
                 return uniques
 
     return None
-
 
 if __name__ == "__main__":
 

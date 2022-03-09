@@ -1,0 +1,1 @@
+- 3d array, made up of 3d-coords representing 

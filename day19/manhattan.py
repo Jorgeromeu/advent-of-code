@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     for p in points:
         for q in points:
-            if (p != q).all():
+            if (p != q).boxes():
                 maxdist = max(maxdist, manhattan(p, q))
 
     print(maxdist)
